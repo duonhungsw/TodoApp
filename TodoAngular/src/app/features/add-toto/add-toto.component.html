@@ -1,0 +1,17 @@
+<div mat-dialog-title>
+    <h1>TodoForm</h1>
+</div>
+<form [formGroup]="addForm" (ngSubmit)="onFormSubmit()">
+    <div mat-diglog-content>
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>TaskName</mat-label>
+                <input matInput formControlName="taskName">
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button class="pr-px" [mat-dialog-close]="false">Cancel</button>
+        <button mat-raised-button color="primary">{{data ? 'Update' : 'Save'}}</button>
+    </div>
+</form>
